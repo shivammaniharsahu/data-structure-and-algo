@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+     int t,i;
+     cin>>t;
+     while(t--){
+         int n,temp=0;
+         cin>>n;
+         int arr[n];
+         for(i=0;i<n-1;i++){
+             cin>>arr[i];
+         
+     temp= temp^arr[i];
+     temp=temp^i;
+             
+         }
+         cout<<(temp^n^n-1)<<endl;
+     }
+        return 0;
+      
+}
