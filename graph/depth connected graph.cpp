@@ -9,8 +9,10 @@ void dfs(int s)
 {
 	//cout<<"bye";
 	visited[s]=true;
+	
 	for(i=0;i<adj[s].size();++i)
 	{
+		
 		if(visited[adj[s][i]]==false)
 			dfs(adj[s][i]);
 	}
@@ -39,6 +41,7 @@ int main()
 		if(visited[i]==false)
 		{
 			dfs(i);
+			cout<<endl;
 			c++;
 		}
 	}
